@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maya El Malah — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maya El Malah</a>
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle">🌙 Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="section-label">About Me</span>
+      <h1 class="page-title">Maya<br>El Malah</h1>
+      <p>Enthusiastic fourth-year MICT student at AUC with a passion for technology, project management, and digital innovation. Skilled in programming, data analysis, and creating solutions that have real-world impact.</p>
+      <div class="hero-btns">
+        <a href="projects.html" class="btn">View Projects</a>
+        <a href="contact.html" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+    <img src="images/profile.jpg" alt="Maya El Malah" class="profile-img">
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── Quick Info ── -->
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="label">University</div>
+      <div class="value">American University in Cairo</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Degree</div>
+      <div class="value">BBA – MICT</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Graduation</div>
+      <div class="value">Expected Spring 2027</div>
+    </div>
+    <div class="info-card">
+      <div class="label">Location</div>
+      <div class="value">Cairo, Egypt</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Education ── -->
+  <h2 class="section-title">Education</h2>
+
+  <div class="edu-item">
+    <div class="edu-dot"></div>
+    <div>
+      <div class="edu-year">2022 – Present</div>
+      <h3>Bachelor of Business Administration – MICT</h3>
+      <p style="color:var(--muted);font-size:0.92em">The American University in Cairo (AUC), Egypt – Expected Spring 2027</p>
+    </div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-dot"></div>
+    <div>
+      <div class="edu-year">Fall 2025</div>
+      <h3>Semester Abroad</h3>
+      <p style="color:var(--muted);font-size:0.92em">Universidad Carlos III, Madrid, Spain<br>
+      <em>Awarded Marwan Sameh Ghabour Study Abroad Scholarship</em></p>
+    </div>
+  </div>
+
+  <div class="edu-item">
+    <div class="edu-dot"></div>
+    <div>
+      <div class="edu-year">Spring 2022</div>
+      <h3>Ontario Secondary School Diploma</h3>
+      <p style="color:var(--muted);font-size:0.92em">Canadian International School of Egypt, Egypt</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Weather API (Home page feature) ── -->
+  <h2 class="section-title">🌤 Current Weather</h2>
+
+  <div class="api-controls">
+    <input type="text" id="weatherCity" placeholder="Enter city name..." value="Cairo">
+    <button class="btn" id="fetchWeatherBtn">Get Weather</button>
+  </div>
+  <p id="weather-status" class="api-status"></p>
+  <div id="weather-result"></div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Maya El Malah</p>
+</footer>
+
+<!-- Welcome Modal -->
+<div id="welcomeModal" class="modal-overlay">
+  <div class="modal-box">
+    <h2>👋 Welcome!</h2>
+    <p>Explore my portfolio</p>
+    <button class="btn" id="closeModalBtn">Enter</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Maya El Malah</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maya El Malah</a>
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><button id="themeToggle">🌙 Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+
+  <span class="section-label">Get In Touch</span>
+  <h1 class="page-title">Contact<br>Me</h1>
+  <p style="color:var(--muted);max-width:500px;margin-bottom:40px;font-size:1em;line-height:1.8;">
+    Drop me a message, and I'll get back to you soon.
+  </p>
+
+  <hr class="divider">
+
+  <div class="contact-grid">
+
+    <!-- Contact Info -->
+    <div>
+      <h2 class="section-title">Contact Info</h2>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">📧</div>
+        <div>
+          <div class="ci-label">Email</div>
+          <!-- Email built via JS to stay clickable and avoid any obfuscation -->
+          <div class="ci-value"><a id="emailLink" href="#"></a></div>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">🔗</div>
+        <div>
+          <div class="ci-label">LinkedIn</div>
+          <div class="ci-value"><a href="https://linkedin.com/in/maya-elmalah" target="_blank" rel="noopener">linkedin.com/in/maya-elmalah</a></div>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">📞</div>
+        <div>
+          <div class="ci-label">Phone</div>
+          <div class="ci-value">+20 100 222 7777</div>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">📍</div>
+        <div>
+          <div class="ci-label">Location</div>
+          <div class="ci-value">Cairo, Egypt</div>
+        </div>
+      </div>
+
+      <div class="contact-info-item">
+        <div class="ci-icon">🎓</div>
+        <div>
+          <div class="ci-label">University</div>
+          <div class="ci-value">American University in Cairo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div>
+      <h2 class="section-title">Send a Message</h2>
+
+      <div class="form-group">
+        <label for="contactName">Name *</label>
+        <input type="text" id="contactName" placeholder="Your full name">
+        <span class="error-msg" id="nameError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="contactEmail">Email *</label>
+        <input type="text" id="contactEmail" placeholder="your@email.com">
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="contactSubject">Subject</label>
+        <input type="text" id="contactSubject" placeholder="What is this about?">
+      </div>
+
+      <div class="form-group">
+        <label for="contactMessage">Message *</label>
+        <textarea id="contactMessage" rows="5" placeholder="Write your message here..."></textarea>
+        <span class="error-msg" id="messageError"></span>
+      </div>
+
+      <button class="btn" id="submitFormBtn">Send Message →</button>
+      <p id="formSuccess" class="success-msg"></p>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Maya El Malah</p>
+</footer>
+
+<script>
+  // Build email link purely in JS so it stays clickable and displays correctly
+  (function() {
+    var user   = "mayaa.amr";
+    var domain = "aucegypt.edu";
+    var full   = user + "@" + domain;
+    var el     = document.getElementById("emailLink");
+    if (el) {
+      el.href        = "mailto:" + full;
+      el.textContent = full;
+    }
+  })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

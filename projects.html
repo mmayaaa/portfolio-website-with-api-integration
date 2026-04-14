@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Maya El Malah</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maya El Malah</a>
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle">🌙 Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+
+  <span class="section-label">Experience &amp; Work</span>
+  <h1 class="page-title">Projects &amp;<br>Achievements</h1>
+
+  <hr class="divider">
+
+  <!-- ── Work Experience ── -->
+  <div class="section-header">
+    <h2 class="section-title" style="margin-bottom:0;border:none;padding:0">Work Experience</h2>
+    <button class="toggle-btn" id="expToggleBtn">Hide</button>
+  </div>
+
+  <div id="experience-content" style="margin-top:16px;">
+
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <h3>IT Intern — Sika Egypt</h3>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <span class="project-tag">Summer 2025</span>
+          <button class="details-btn" id="sikaBtn">Show Details</button>
+        </div>
+      </div>
+      <ul id="sika-details" class="project-details" style="display:none;">
+        <li>Created a chemical inventory system using Python and SQLite to manage data, track stock, generate Excel expiry alerts, and export reports.</li>
+        <li>Reviewed database entries to ensure accuracy.</li>
+        <li>Assisted in configuration of employee devices, improving onboarding efficiency.</li>
+        <li>Delivered weekly presentations on time management and presentation skills.</li>
+        <li>Visited Obour factory to learn safety protocols and operations.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <h3>Intern — Maersk Egypt</h3>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <span class="project-tag">Summer 2024</span>
+          <button class="details-btn" id="maerskBtn">Show Details</button>
+        </div>
+      </div>
+      <ul id="maersk-details" class="project-details" style="display:none;">
+        <li>Rotated across departments, gaining hands-on experience in logistics and supply chain management.</li>
+        <li>Contributed to a case study and presented solutions to management.</li>
+        <li>Observed container operations in Alexandria.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <h3>Intern — HSBC Egypt</h3>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <span class="project-tag">Summer 2024</span>
+          <button class="details-btn" id="hsbcBtn">Show Details</button>
+        </div>
+      </div>
+      <ul id="hsbc-details" class="project-details" style="display:none;">
+        <li>Attended sessions covering banking operations and financial systems.</li>
+        <li>Contributed to a branding project and collaborated on a video for the new head office inauguration.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Certifications ── -->
+  <div class="section-header">
+    <h2 class="section-title" style="margin-bottom:0;border:none;padding:0">Certifications &amp; Achievements</h2>
+    <button class="toggle-btn" id="certsToggleBtn">Hide</button>
+  </div>
+
+  <div id="certs-content" style="margin-top:16px;">
+
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <h3>Global Finalist — Map the System, Oxford University, UK</h3>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <span class="project-tag">Summer 2025</span>
+          <button class="details-btn" id="mapBtn">Show Details</button>
+        </div>
+      </div>
+      <ul id="map-details" class="project-details" style="display:none;">
+        <li>Awarded Best Storytelling globally.</li>
+        <li>Applied systems thinking to examine "Gharemat Crisis" in Egypt.</li>
+        <li>Presented findings at the Global Final in Oxford to expert panels.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div>
+          <h3>Delegate — Junior Startup Competition, Egypt</h3>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <span class="project-tag">Fall 2020</span>
+          <button class="details-btn" id="startupBtn">Show Details</button>
+        </div>
+      </div>
+      <ul id="startup-details" class="project-details" style="display:none;">
+        <li>Awarded second place and Most Market Ready startup globally.</li>
+        <li>Developed and pitched startup ideas to judges.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Quotes API ── -->
+  <h2 class="section-title">💬 Motivational Quote</h2>
+
+  <p id="quote-status" class="api-status"></p>
+  <div id="quote-result" class="quote-box" style="display:none;"></div>
+  <button class="btn" id="fetchQuoteBtn" style="margin-top:14px;">New Quote ✨</button>
+
+  <hr class="divider">
+
+  <!-- ── News API ── -->
+  <h2 class="section-title">📰 Latest News</h2>
+
+  <div class="api-controls">
+    <select id="newsCategory">
+      <option value="technology">Technology</option>
+      <option value="business">Business</option>
+      <option value="science">Science</option>
+      <option value="environment">Environment</option>
+    </select>
+    <button class="btn" id="fetchNewsBtn">Load Headlines</button>
+  </div>
+  <p id="news-status" class="api-status"></p>
+  <ul id="news-results" class="news-list"></ul>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Maya El Malah</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

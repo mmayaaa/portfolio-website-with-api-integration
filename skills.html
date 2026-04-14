@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Maya El Malah</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Maya El Malah</a>
+    <button class="hamburger" id="hamburger">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="skills.html" class="active">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="themeToggle">🌙 Dark</button></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="page">
+
+  <span class="section-label">Core Skills</span>
+  <h1 class="page-title">Skills &amp;<br>Expertise</h1>
+
+  <hr class="divider">
+
+  <!-- ── Technical Skills ── -->
+  <div class="section-header">
+    <h2 class="section-title" style="margin-bottom:0;border:none;padding:0">Technical Skills</h2>
+    <button class="toggle-btn" id="techToggleBtn">Hide</button>
+  </div>
+  <div id="tech-skills" style="margin-top:16px;">
+    <div class="skills-grid" id="tech-list">
+      <span class="skill-tag">HTML &amp; CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">C++</span>
+      <span class="skill-tag">R</span>
+      <span class="skill-tag">SQL &amp; SQLite</span>
+      <span class="skill-tag">Data Analysis &amp; Visualization</span>
+      <span class="skill-tag">UI/UX Design Fundamentals</span>
+      <span class="skill-tag">Microsoft Office</span>
+    </div>
+    <div class="add-row">
+      <input type="text" id="newTechSkill" placeholder="Add a technical skill...">
+      <button class="btn" id="addTechSkillBtn">+ Add</button>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Professional Skills ── -->
+  <div class="section-header">
+    <h2 class="section-title" style="margin-bottom:0;border:none;padding:0">Professional Skills</h2>
+    <button class="toggle-btn" id="proToggleBtn">Hide</button>
+  </div>
+  <div id="pro-skills" style="margin-top:16px;">
+    <div class="skills-grid" id="pro-list">
+      <span class="skill-tag">Project Management</span>
+      <span class="skill-tag">Systems Thinking</span>
+      <span class="skill-tag">Presentation &amp; Communication</span>
+      <span class="skill-tag">Supply Chain &amp; Logistics</span>
+      <span class="skill-tag">Financial Systems</span>
+      <span class="skill-tag">Research &amp; Analysis</span>
+      <span class="skill-tag">Team Collaboration</span>
+    </div>
+    <div class="add-row">
+      <input type="text" id="newProSkill" placeholder="Add a professional skill...">
+      <button class="btn" id="addProSkillBtn">+ Add</button>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── Languages ── -->
+  <h2 class="section-title">Languages</h2>
+  <div class="skills-grid">
+    <span class="skill-tag">Arabic — Native</span>
+    <span class="skill-tag">English — Fluent</span>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── REST Countries API ── -->
+  <h2 class="section-title">🌍 Country Explorer</h2>
+
+  <div class="api-controls">
+    <input type="text" id="countryInput" placeholder="Enter a country name... (e.g. Egypt, Spain)">
+    <button class="btn" id="fetchCountryBtn">Search</button>
+  </div>
+  <p id="country-status" class="api-status"></p>
+  <div id="country-results" class="countries-grid"></div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Maya El Malah</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
